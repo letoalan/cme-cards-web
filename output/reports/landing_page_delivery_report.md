@@ -78,27 +78,28 @@
 
 ## 6. Résultat des tests automatisés
 
-La commande `pytest -v tests/test_landing_page.py` valide l'intégralité des 16 points de contrôle :
+La commande `pytest -v tests/test_landing_page.py` valide l'intégralité des 17 points de contrôle :
 
 ```text
-tests/test_landing_page.py::test_01_index_html_exists PASSED             [  6%]
-tests/test_landing_page.py::test_02_cartes_html_exists_and_contains_gallery PASSED [ 12%]
-tests/test_landing_page.py::test_03_landing_css_and_js_exist PASSED      [ 18%]
-tests/test_landing_page.py::test_04_landing_main_texts_present PASSED    [ 25%]
-tests/test_landing_page.py::test_05_single_h1_tag PASSED                 [ 31%]
-tests/test_landing_page.py::test_06_five_categories_rendered PASSED      [ 37%]
-tests/test_landing_page.py::test_07_dynamic_card_counter_and_json_source PASSED [ 43%]
-tests/test_landing_page.py::test_08_category_filter_links PASSED         [ 50%]
-tests/test_landing_page.py::test_09_no_manual_32_cards_hardcoded_in_landing PASSED [ 56%]
-tests/test_landing_page.py::test_10_embedded_json_for_offline_mode PASSED [ 62%]
-tests/test_landing_page.py::test_11_gallery_supports_query_params_and_hash PASSED [ 68%]
-tests/test_landing_page.py::test_12_no_external_network_dependencies PASSED [ 75%]
-tests/test_landing_page.py::test_13_prefers_reduced_motion_rule PASSED   [ 81%]
-tests/test_landing_page.py::test_14_all_landing_images_local_and_valid PASSED [ 87%]
-tests/test_landing_page.py::test_15_essential_controls_and_nav_links PASSED [ 93%]
-tests/test_landing_page.py::test_16_pedagogical_data_integrity PASSED    [100%]
+tests/test_landing_page.py::test_01_index_html_exists PASSED             [  5%]
+tests/test_landing_page.py::test_02_cartes_html_exists_and_contains_gallery PASSED [ 11%]
+tests/test_landing_page.py::test_03_landing_css_and_js_exist PASSED      [ 17%]
+tests/test_landing_page.py::test_04_landing_main_texts_present PASSED    [ 23%]
+tests/test_landing_page.py::test_05_single_h1_tag PASSED                 [ 29%]
+tests/test_landing_page.py::test_06_five_categories_rendered PASSED      [ 35%]
+tests/test_landing_page.py::test_07_dynamic_card_counter_and_json_source PASSED [ 41%]
+tests/test_landing_page.py::test_08_category_filter_links PASSED         [ 47%]
+tests/test_landing_page.py::test_09_no_manual_32_cards_hardcoded_in_landing PASSED [ 52%]
+tests/test_landing_page.py::test_10_embedded_json_for_offline_mode PASSED [ 58%]
+tests/test_landing_page.py::test_11_gallery_supports_query_params_and_hash PASSED [ 64%]
+tests/test_landing_page.py::test_12_no_external_network_dependencies PASSED [ 70%]
+tests/test_landing_page.py::test_13_prefers_reduced_motion_rule PASSED   [ 76%]
+tests/test_landing_page.py::test_14_all_landing_images_local_and_valid PASSED [ 82%]
+tests/test_landing_page.py::test_15_essential_controls_and_nav_links PASSED [ 88%]
+tests/test_landing_page.py::test_16_pedagogical_data_integrity PASSED    [ 94%]
+tests/test_landing_page.py::test_17_recruitment_modalities_and_survey_link PASSED [100%]
 
-============================== 16 passed in 0.05s ==============================
+============================== 17 passed in 0.04s ==============================
 ```
 
 ---

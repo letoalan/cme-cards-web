@@ -25,10 +25,11 @@
 - Ouverture card : Pris en charge via `cartes.html?card=CME-XX` (défilement centré, mise en valeur visuelle et focus clavier)
 - Tirage aléatoire : Pris en charge via `cartes.html?random=1` (déclenchement de la modale de tirage aléatoire)
 - Lancement diaporama : Pris en charge via `cartes.html#presentation` (ouverture directe de la présentation plein écran 16:9)
+- Modalités de recrutement : Élections pour les CM1-CM2 et volontariat via le sondage en ligne `https://edurl.fr/candidatcme`
 
 ## Tests
 - Commande : `pytest -v tests/test_landing_page.py`
-- Résultat : 16 passed in 0.05s (100% de réussite)
+- Résultat : 17 passed in 0.04s (100% de réussite)
 
 ## Verdict
 - PASS

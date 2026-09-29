@@ -180,10 +180,13 @@ def test_12_no_external_network_dependencies(index_html_content):
     landing_js = (ROOT_DIR / "landing.js").read_text(encoding="utf-8")
 
     for file_name, content in [("index.html", index_html_content), ("landing.css", landing_css), ("landing.js", landing_js)]:
-        # Chercher des urls http:// ou https:// (hors attributs xmlns standard)
+        # Chercher des urls http:// ou https:// (hors attributs xmlns et lien officiel de candidature demandé par l'utilisateur)
         urls = re.findall(r'https?://[^\s"\'<>]+', content)
-        # Filtrer d'éventuels liens de documentation ou xmlns
-        active_urls = [u for u in urls if not u.startswith("http://www.w3.org/")]
+        # Filtrer xmlns et lien de formulaire externe
+        active_urls = [
+            u for u in urls
+            if not u.startswith("http://www.w3.org/") and "edurl.fr/candidatcme" not in u
+        ]
         assert len(active_urls) == 0, f"Ressource externe interdite détectée dans {file_name} : {active_urls}"
 
 
@@ -237,3 +240,11 @@ def test_16_pedagogical_data_integrity(cards_data):
     parent_specs = ROOT_DIR.parent / "cme-cards" / "specs" / "CARDS.md"
     if parent_specs.is_file():
         assert parent_specs.stat().st_size > 1000
+
+
+def test_17_recruitment_modalities_and_survey_link(index_html_content):
+    """17. Vérifie que les modalités de recrutement (Élections CM1/CM2, volontariat et lien sondage) sont présentes."""
+    assert "CM1" in index_html_content and "CM2" in index_html_content
+    assert "élection" in index_html_content.lower() or "elections" in index_html_content.lower()
+    assert "volontariat" in index_html_content.lower()
+    assert "edurl.fr/candidatcme" in index_html_content

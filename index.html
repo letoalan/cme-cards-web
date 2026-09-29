@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CME de Saint-Junien — Conseil municipal des enfants | Missions citoyennes</title>
-  <meta name="description" content="Découvrez le Conseil municipal des enfants (CME) de Saint-Junien : écouter, débattre, agir pour la commune et approfondir avec le jeu citoyen de 32 cartes.">
+  <meta name="description" content="Découvrez le Conseil municipal des enfants (CME) de Saint-Junien : écouter, débattre, agir pour la commune, modalités d'élection et de volontariat, et approfondir avec le jeu de 32 cartes.">
   <link rel="stylesheet" href="landing.css">
 </head>
 <body>
@@ -33,6 +33,7 @@
           <li><a href="#decouvrir" class="nav-link">Le CME à Saint-Junien</a></li>
           <li><a href="#missions" class="nav-link">Les 5 missions</a></li>
           <li><a href="#niveaux" class="nav-link">Écoles &amp; Collège</a></li>
+          <li><a href="#recrutement" class="nav-link">Recrutement</a></li>
           <li><a href="#jeu" class="nav-link">Le jeu de cartes</a></li>
           <li><a href="cartes.html#presentation" class="nav-link">Mode diaporama</a></li>
           <li><a href="cartes.html" class="nav-btn-highlight"><span>Explorer les 32 cartes</span> <span aria-hidden="true">→</span></a></li>
@@ -62,8 +63,12 @@
               <span>Découvrir les missions</span>
               <span aria-hidden="true">↓</span>
             </a>
+            <a href="#recrutement" class="btn btn-accent">
+              <span aria-hidden="true">✍️</span>
+              <span>Rejoindre le CME</span>
+            </a>
             <a href="#jeu" class="btn btn-outline" style="border-color: var(--democratie); color: var(--democratie-dark);">
-              <span>Approfondir avec le jeu de cartes</span>
+              <span>Approfondir avec le jeu</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -345,7 +350,40 @@
       </div>
     </section>
 
-    <!-- 6. Section « Approfondir avec le jeu de 32 cartes » -->
+    <!-- 6. NOUVEAU : Section « Recrutement du CME : Élections et Volontariat » -->
+    <section class="section-recruitment" id="recrutement" aria-labelledby="recruitmentTitle">
+      <div class="landing-container">
+        <div class="recruitment-card">
+          <div class="recruitment-badge">
+            <span aria-hidden="true">🗳️</span>
+            <span>Recrutement du CME de Saint-Junien</span>
+          </div>
+          <h2 id="recruitmentTitle" class="recruitment-title">Comment rejoindre le Conseil municipal des enfants ?</h2>
+          <p class="recruitment-lead">Tu souhaites t’engager pour Saint-Junien, faire entendre la voix de tes camarades et imaginer des projets concrets ? Découvre les modalités de candidature et d’élection pour participer au CME.</p>
+          
+          <div class="recruitment-grid">
+            <div class="recruitment-box box-elections">
+              <div class="recruitment-icon" aria-hidden="true">🗳️</div>
+              <h3 class="recruitment-box-title">Élections pour les CM1 et CM2</h3>
+              <p class="recruitment-box-text">Dans les écoles élémentaires de Saint-Junien, des élections démocratiques sont organisées pour les classes de CM1 et CM2. Les élèves candidats préparent leur campagne, présentent leurs propositions et leurs camarades votent dans le respect des règles citoyennes.</p>
+            </div>
+
+            <div class="recruitment-box box-volontariat">
+              <div class="recruitment-icon" aria-hidden="true">✍️</div>
+              <h3 class="recruitment-box-title">Volontariat &amp; Inscription en ligne</h3>
+              <p class="recruitment-box-text">L’accès au CME repose sur le volontariat et la motivation de chaque enfant. Pour déposer ta candidature et exprimer ton envie de t’investir, inscris-toi facilement via le sondage officiel en ligne.</p>
+              <a href="https://edurl.fr/candidatcme" target="_blank" rel="noopener noreferrer" class="recruitment-btn" aria-label="Accéder au sondage de candidature pour le CME de Saint-Junien sur edurl.fr/candidatcme (nouvelle fenêtre)">
+                <span>S'inscrire sur le sondage</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <div class="recruitment-url-hint">Lien direct : <strong>edurl.fr/candidatcme</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Section « Approfondir avec le jeu de 32 cartes » -->
     <section class="section-how-to" id="jeu" aria-labelledby="jeuTitle">
       <div class="landing-container">
         <div class="section-header">
@@ -391,7 +429,7 @@
       </div>
     </section>
 
-    <!-- 7. Section « Aperçu des cartes » (6 cartes générées dynamiquement) -->
+    <!-- 8. Section « Aperçu des cartes » (6 cartes générées dynamiquement) -->
     <section class="section-preview" id="apercu" aria-labelledby="previewTitle">
       <div class="landing-container">
         <div class="section-header">
@@ -406,7 +444,7 @@
       </div>
     </section>
 
-    <!-- 8. Section finale — Appel à l’action -->
+    <!-- 9. Section finale — Appel à l’action -->
     <section class="section-cta" id="action" aria-labelledby="ctaTitle">
       <div class="landing-container cta-box">
         <h2 id="ctaTitle" class="cta-title">Prêts à faire entendre vos idées ?</h2>
@@ -415,6 +453,10 @@
           <a href="cartes.html" class="btn btn-white">
             <span>Explorer les 32 cartes</span>
             <span aria-hidden="true">→</span>
+          </a>
+          <a href="https://edurl.fr/candidatcme" target="_blank" rel="noopener noreferrer" class="btn btn-cta-secondary">
+            <span>Candidater au CME (edurl.fr/candidatcme)</span>
+            <span aria-hidden="true">↗</span>
           </a>
           <a href="cartes.html#presentation" class="btn btn-cta-secondary">
             <span aria-hidden="true">🖥️</span>
@@ -425,7 +467,7 @@
     </section>
   </main>
 
-  <!-- 9. Pied de page -->
+  <!-- 10. Pied de page -->
   <footer class="site-footer">
     <div class="landing-container">
       <div class="footer-grid">
@@ -438,6 +480,7 @@
           <a href="index.html" class="footer-link">Accueil</a>
           <a href="#decouvrir" class="footer-link">Le CME</a>
           <a href="#missions" class="footer-link">Missions</a>
+          <a href="#recrutement" class="footer-link">Recrutement</a>
           <a href="#jeu" class="footer-link">Jeu de 32 cartes</a>
           <a href="cartes.html" class="footer-link">Galerie interactive</a>
           <button id="btnScrollTop" class="footer-btn-top" aria-label="Retour en haut de page">
@@ -452,7 +495,7 @@
           <span class="offline-dot" aria-hidden="true"></span>
           <span>Fonctionne hors ligne</span>
         </div>
-        <div class="footer-meta">CME Saint-Junien • Participation citoyenne — Écoles &amp; Collège</div>
+        <div class="footer-meta">CME Saint-Junien • Élections CM1-CM2 &amp; Volontariat — Candidatures sur edurl.fr/candidatcme</div>
       </div>
     </div>
   </footer>

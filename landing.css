@@ -1293,6 +1293,152 @@ body {
 }
 
 /* ==========================================================================
+   Section Recrutement & Candidature CME
+   ========================================================================== */
+.section-recruitment {
+  padding: 4.5rem 0;
+  background: linear-gradient(180deg, #F9FAFB 0%, #EFF6FF 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.recruitment-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 2px solid #DBEAFE;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.08);
+  position: relative;
+}
+
+.recruitment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: var(--democratie-light);
+  color: var(--democratie-dark);
+  font-weight: 800;
+  font-size: 0.82rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.recruitment-title {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: var(--ink-heading);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.recruitment-lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 780px;
+  margin-bottom: 2.5rem;
+}
+
+.recruitment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.recruitment-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.recruitment-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.recruitment-box.box-elections {
+  border-left: 5px solid var(--democratie);
+}
+
+.recruitment-box.box-volontariat {
+  border-left: 5px solid var(--solidarite);
+  background: #F0FDF4;
+  border-color: #BBF7D0;
+}
+
+.recruitment-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.recruitment-box-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  margin-bottom: 0.85rem;
+}
+
+.recruitment-box-text {
+  font-size: 0.98rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.recruitment-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.75rem 1.4rem;
+  background-color: var(--solidarite);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.28);
+  transition: all var(--transition-fast);
+}
+
+.recruitment-btn:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.36);
+}
+
+.recruitment-url-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.recruitment-url-hint strong {
+  color: var(--ink-heading);
+}
+
+@media (max-width: 768px) {
+  .recruitment-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .recruitment-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ==========================================================================
    12. Réduction des animations (prefers-reduced-motion)
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
