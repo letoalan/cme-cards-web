@@ -299,4 +299,53 @@ document.addEventListener("DOMContentLoaded", () => {
       btnDyslexic.classList.toggle("btn-active", isDys);
     });
   }
+
+  // 7. Prise en charge des paramètres d'URL (category, card, random) et ancres (#presentation)
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get("category");
+  const cardParam = urlParams.get("card");
+  const randomParam = urlParams.get("random");
+
+  if (catParam) {
+    const targetBtn = Array.from(filterBtns).find(
+      (btn) => btn.getAttribute("data-cat") === catParam.toUpperCase()
+    );
+    if (targetBtn) {
+      targetBtn.click();
+    }
+  }
+
+  if (cardParam) {
+    const upperCard = cardParam.toUpperCase();
+    const targetCard = document.querySelector(`.card-container[data-id="${upperCard}"]`);
+    if (targetCard) {
+      targetCard.style.display = "";
+      targetCard.classList.add("highlighted-card");
+      targetCard.setAttribute("tabindex", "-1");
+      targetCard.focus();
+      targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+  if (randomParam === "1" || randomParam === "true") {
+    if (btnRandomDraw) {
+      setTimeout(() => {
+        btnRandomDraw.click();
+      }, 150);
+    }
+  }
+
+  function handlePresentationHash() {
+    if (window.location.hash === "#presentation") {
+      let startIndex = 0;
+      if (cardParam && cardsData.length > 0) {
+        const foundIdx = cardsData.findIndex((c) => c.id === cardParam.toUpperCase());
+        if (foundIdx !== -1) startIndex = foundIdx;
+      }
+      openPresentationAt(startIndex, "recto");
+    }
+  }
+
+  handlePresentationHash();
+  window.addEventListener("hashchange", handlePresentationHash);
 });

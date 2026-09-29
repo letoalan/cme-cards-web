@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartes CME — Jeu Pédagogique Interactif</title>
+  <meta name="description" content="Jeu de 32 cartes bifaces pédagogiques du Conseil Municipal des Enfants (CME) pour CM1, CM2 et collège.">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-title">
+        <h1><a href="index.html" style="text-decoration:none; color:inherit;">🗳️ Cartes CME — Missions Citoyennes</a></h1>
+        <p>32 cartes bifaces d'action citoyenne pour l'école et le collège</p>
+      </div>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-outline" aria-label="Retourner à la page d'accueil">🏠 Accueil</a>
+        <button id="btnPresentationMode" class="btn btn-accent" aria-label="Lancer la présentation PowerPoint 16:9 en plein écran">
+          🖥️ Diaporama PowerPoint 16:9
+        </button>
+        <button id="btnRandomDraw" class="btn btn-primary" aria-label="Tirer une carte au sort pour la classe">
+          🎲 Pioche Aléatoire
+        </button>
+        <button id="btnFlipAll" class="btn btn-outline" aria-label="Retourner toutes les cartes simultanément">
+          🔄 Voir tous les versos
+        </button>
+        <button id="btnDyslexic" class="btn btn-outline" aria-label="Activer le mode police haute lisibilité pour élèves dyslexiques">
+          👁️ Mode Dyslexie
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="filter-bar" aria-label="Filtrer les cartes par famille citoyenne">
+    <button class="filter-btn active" data-cat="ALL">Toutes (32)</button>
+    <button class="filter-btn" data-cat="DEMOCRATIE">🗳️ Démocratie</button>
+    <button class="filter-btn" data-cat="COMMUNE">🏛️ Commune</button>
+    <button class="filter-btn" data-cat="QUOTIDIEN">🏫 Quotidien</button>
+    <button class="filter-btn" data-cat="SOLIDARITE">🌱 Solidarité</button>
+    <button class="filter-btn" data-cat="PROJET">🛠️ Projet</button>
+  </nav>
+
+  <main class="app-main">
+    <section class="cards-grid" id="cardsGrid" aria-label="Galerie des cartes pédagogiques">
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-01 : Être élu·e (double-clic pour vue PowerPoint 16:9)" data-id="CME-01" data-category="DEMOCRATIE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-DEMOCRATIE">
+          <div class="card-front-top">
+            <span class="number-badge">01</span>
+            <span class="cat-label-front">DEMOCRATIE</span>
+            <span class="cat-icon-front" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-01-etre-elue.png" alt="Illustration pour Être élu·e" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Être élu·e</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-01</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-DEMOCRATIE">
+            <span class="number-badge">01</span>
+            <span class="back-title">Être élu·e</span>
+            <span class="back-icon" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Participer à une élection : se présenter, expliquer ses idées, voter dans le respect des règles.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box DEMOCRATIE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelle promesse réaliste pourrais-tu faire à tes camarades ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Démocratie et représentation</span>
+              <span>CME-01</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-02 : Faire campagne (double-clic pour vue PowerPoint 16:9)" data-id="CME-02" data-category="DEMOCRATIE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-DEMOCRATIE">
+          <div class="card-front-top">
+            <span class="number-badge">02</span>
+            <span class="cat-label-front">DEMOCRATIE</span>
+            <span class="cat-icon-front" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-02-faire-campagne.png" alt="Illustration pour Faire campagne" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Faire campagne</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-02</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-DEMOCRATIE">
+            <span class="number-badge">02</span>
+            <span class="back-title">Faire campagne</span>
+            <span class="back-icon" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Présenter son programme et convaincre sans se moquer ni promettre l’impossible.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box DEMOCRATIE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Crée un slogan de huit mots maximum pour une candidature au CME.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Démocratie et représentation</span>
+              <span>CME-02</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-03 : Écouter les élèves (double-clic pour vue PowerPoint 16:9)" data-id="CME-03" data-category="DEMOCRATIE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-DEMOCRATIE">
+          <div class="card-front-top">
+            <span class="number-badge">03</span>
+            <span class="cat-label-front">DEMOCRATIE</span>
+            <span class="cat-icon-front" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-03-ecouter-les-eleves.png" alt="Illustration pour Écouter les élèves" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Écouter —</div>
+            <h2 class="card-title-front">Écouter les élèves</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-03</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-DEMOCRATIE">
+            <span class="number-badge">03</span>
+            <span class="back-title">Écouter les élèves</span>
+            <span class="back-icon" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Recueillir les besoins, les idées et les problèmes des autres enfants. Un élu est un relais.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box DEMOCRATIE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Invente trois questions pour consulter les élèves de ta classe.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Démocratie et représentation</span>
+              <span>CME-03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-04 : Prendre la parole (double-clic pour vue PowerPoint 16:9)" data-id="CME-04" data-category="DEMOCRATIE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-DEMOCRATIE">
+          <div class="card-front-top">
+            <span class="number-badge">04</span>
+            <span class="cat-label-front">DEMOCRATIE</span>
+            <span class="cat-icon-front" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-04-prendre-la-parole.png" alt="Illustration pour Prendre la parole" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Prendre la parole</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-04</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-DEMOCRATIE">
+            <span class="number-badge">04</span>
+            <span class="back-title">Prendre la parole</span>
+            <span class="back-icon" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Exprimer une idée clairement, donner des exemples et respecter le temps de parole de chacun.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box DEMOCRATIE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Explique une proposition utile pour ta commune en trente secondes.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Démocratie et représentation</span>
+              <span>CME-04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-05 : Débattre (double-clic pour vue PowerPoint 16:9)" data-id="CME-05" data-category="DEMOCRATIE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-DEMOCRATIE">
+          <div class="card-front-top">
+            <span class="number-badge">05</span>
+            <span class="cat-label-front">DEMOCRATIE</span>
+            <span class="cat-icon-front" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-05-debattre.png" alt="Illustration pour Débattre" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Débattre</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-05</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-DEMOCRATIE">
+            <span class="number-badge">05</span>
+            <span class="back-title">Débattre</span>
+            <span class="back-icon" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Comparer plusieurs opinions, argumenter et accepter que l’on ne soit pas toujours d’accord.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box DEMOCRATIE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Transforme « je ne suis pas d’accord » en une phrase constructive.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Démocratie et représentation</span>
+              <span>CME-05</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-06 : Décider ensemble (double-clic pour vue PowerPoint 16:9)" data-id="CME-06" data-category="DEMOCRATIE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-DEMOCRATIE">
+          <div class="card-front-top">
+            <span class="number-badge">06</span>
+            <span class="cat-label-front">DEMOCRATIE</span>
+            <span class="cat-icon-front" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-06-decider-ensemble.png" alt="Illustration pour Décider ensemble" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Décider ensemble</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-06</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-DEMOCRATIE">
+            <span class="number-badge">06</span>
+            <span class="back-title">Décider ensemble</span>
+            <span class="back-icon" aria-hidden="true">🗳️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Chercher un compromis ou voter lorsqu’il faut choisir entre plusieurs solutions.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box DEMOCRATIE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Comment choisir entre un jardin partagé et un terrain de jeux si le budget ne permet qu’un seul projet ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Démocratie et représentation</span>
+              <span>CME-06</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-07 : Comprendre la mairie (double-clic pour vue PowerPoint 16:9)" data-id="CME-07" data-category="COMMUNE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-COMMUNE">
+          <div class="card-front-top">
+            <span class="number-badge">07</span>
+            <span class="cat-label-front">COMMUNE</span>
+            <span class="cat-icon-front" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-07-comprendre-la-mairie.png" alt="Illustration pour Comprendre la mairie" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Comprendre —</div>
+            <h2 class="card-title-front">Comprendre la mairie</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-07</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-COMMUNE">
+            <span class="number-badge">07</span>
+            <span class="back-title">Comprendre la mairie</span>
+            <span class="back-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Découvrir ce que fait une commune : écoles, rues, parcs, sports, culture, solidarité et restauration scolaire.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box COMMUNE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Cite trois services municipaux que tu utilises dans ta vie quotidienne.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Comprendre la commune</span>
+              <span>CME-07</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-08 : Rencontrer les élus (double-clic pour vue PowerPoint 16:9)" data-id="CME-08" data-category="COMMUNE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-COMMUNE">
+          <div class="card-front-top">
+            <span class="number-badge">08</span>
+            <span class="cat-label-front">COMMUNE</span>
+            <span class="cat-icon-front" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-08-rencontrer-les-elus.png" alt="Illustration pour Rencontrer les élus" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Rencontrer —</div>
+            <h2 class="card-title-front">Rencontrer les élus</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-08</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-COMMUNE">
+            <span class="number-badge">08</span>
+            <span class="back-title">Rencontrer les élus</span>
+            <span class="back-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Dialoguer avec le maire, les adjoints et les conseillers municipaux pour présenter des idées ou poser des questions.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box COMMUNE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Prépare une question utile à poser au maire de ta commune.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Comprendre la commune</span>
+              <span>CME-08</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-09 : Observer son quartier (double-clic pour vue PowerPoint 16:9)" data-id="CME-09" data-category="COMMUNE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-COMMUNE">
+          <div class="card-front-top">
+            <span class="number-badge">09</span>
+            <span class="cat-label-front">COMMUNE</span>
+            <span class="cat-icon-front" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-09-observer-son-quartier.png" alt="Illustration pour Observer son quartier" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Observer —</div>
+            <h2 class="card-title-front">Observer son quartier</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-09</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-COMMUNE">
+            <span class="number-badge">09</span>
+            <span class="back-title">Observer son quartier</span>
+            <span class="back-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Regarder ce qui fonctionne, ce qui manque et ce qui pourrait être amélioré autour de l’école ou dans le quartier.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box COMMUNE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Dessine un trajet et place deux endroits qui pourraient être améliorés.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Comprendre la commune</span>
+              <span>CME-09</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-10 : Enquêter (double-clic pour vue PowerPoint 16:9)" data-id="CME-10" data-category="COMMUNE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-COMMUNE">
+          <div class="card-front-top">
+            <span class="number-badge">10</span>
+            <span class="cat-label-front">COMMUNE</span>
+            <span class="cat-icon-front" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-10-enqueter.png" alt="Illustration pour Enquêter" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Enquêter</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-10</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-COMMUNE">
+            <span class="number-badge">10</span>
+            <span class="back-title">Enquêter</span>
+            <span class="back-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Chercher des informations avant de proposer une solution : sondage, visite, observation, entretien ou recherche documentaire.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box COMMUNE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelles personnes pourrais-tu interroger pour améliorer un parc ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Comprendre la commune</span>
+              <span>CME-10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-11 : Travailler en commission (double-clic pour vue PowerPoint 16:9)" data-id="CME-11" data-category="COMMUNE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-COMMUNE">
+          <div class="card-front-top">
+            <span class="number-badge">11</span>
+            <span class="cat-label-front">COMMUNE</span>
+            <span class="cat-icon-front" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-11-travailler-en-commission.png" alt="Illustration pour Travailler en commission" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Coopérer —</div>
+            <h2 class="card-title-front">Travailler en commission</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-11</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-COMMUNE">
+            <span class="number-badge">11</span>
+            <span class="back-title">Travailler en commission</span>
+            <span class="back-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Se répartir en petits groupes selon des thèmes : environnement, solidarité, loisirs, école ou mobilité.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box COMMUNE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Choisis une commission et explique pourquoi tu aimerais y participer.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Comprendre la commune</span>
+              <span>CME-11</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-12 : Préparer une réunion (double-clic pour vue PowerPoint 16:9)" data-id="CME-12" data-category="COMMUNE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-COMMUNE">
+          <div class="card-front-top">
+            <span class="number-badge">12</span>
+            <span class="cat-label-front">COMMUNE</span>
+            <span class="cat-icon-front" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-12-preparer-une-reunion.png" alt="Illustration pour Préparer une réunion" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Organiser —</div>
+            <h2 class="card-title-front">Préparer une réunion</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-12</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-COMMUNE">
+            <span class="number-badge">12</span>
+            <span class="back-title">Préparer une réunion</span>
+            <span class="back-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Construire un ordre du jour, noter les décisions et prévoir les prochaines étapes.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box COMMUNE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Rédige un ordre du jour de trois points pour améliorer la cour de récréation.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Comprendre la commune</span>
+              <span>CME-12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-13 : Améliorer l’école (double-clic pour vue PowerPoint 16:9)" data-id="CME-13" data-category="QUOTIDIEN">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-QUOTIDIEN">
+          <div class="card-front-top">
+            <span class="number-badge">13</span>
+            <span class="cat-label-front">QUOTIDIEN</span>
+            <span class="cat-icon-front" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-13-ameliorer-lecole.png" alt="Illustration pour Améliorer l’école" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Améliorer —</div>
+            <h2 class="card-title-front">Améliorer l’école</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-13</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-QUOTIDIEN">
+            <span class="number-badge">13</span>
+            <span class="back-title">Améliorer l’école</span>
+            <span class="back-icon" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Proposer des idées sur le bien-être, la cour, les repas, l’égalité ou le respect à l’école.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box QUOTIDIEN">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelle amélioration serait utile au plus grand nombre d’élèves ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Améliorer la vie quotidienne</span>
+              <span>CME-13</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-14 : Faciliter les déplacements (double-clic pour vue PowerPoint 16:9)" data-id="CME-14" data-category="QUOTIDIEN">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-QUOTIDIEN">
+          <div class="card-front-top">
+            <span class="number-badge">14</span>
+            <span class="cat-label-front">QUOTIDIEN</span>
+            <span class="cat-icon-front" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-14-faciliter-les-deplacements.png" alt="Illustration pour Faciliter les déplacements" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Se déplacer —</div>
+            <h2 class="card-title-front">Faciliter les déplacements</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-14</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-QUOTIDIEN">
+            <span class="number-badge">14</span>
+            <span class="back-title">Faciliter les déplacements</span>
+            <span class="back-icon" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Réfléchir aux trajets à pied, à vélo, en bus ou en voiture, et à la sécurité autour des écoles.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box QUOTIDIEN">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Repère un danger possible sur le chemin de l’école et propose une solution.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Améliorer la vie quotidienne</span>
+              <span>CME-14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-15 : Imaginer des loisirs (double-clic pour vue PowerPoint 16:9)" data-id="CME-15" data-category="QUOTIDIEN">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-QUOTIDIEN">
+          <div class="card-front-top">
+            <span class="number-badge">15</span>
+            <span class="cat-label-front">QUOTIDIEN</span>
+            <span class="cat-icon-front" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-15-imaginer-des-loisirs.png" alt="Illustration pour Imaginer des loisirs" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Imaginer —</div>
+            <h2 class="card-title-front">Imaginer des loisirs</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-15</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-QUOTIDIEN">
+            <span class="number-badge">15</span>
+            <span class="back-title">Imaginer des loisirs</span>
+            <span class="back-icon" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Proposer des activités, des espaces de jeux ou des événements sportifs, culturels et intergénérationnels.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box QUOTIDIEN">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Conçois une activité gratuite ouverte à tous les enfants de la commune.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Améliorer la vie quotidienne</span>
+              <span>CME-15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-16 : Prendre soin des lieux (double-clic pour vue PowerPoint 16:9)" data-id="CME-16" data-category="QUOTIDIEN">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-QUOTIDIEN">
+          <div class="card-front-top">
+            <span class="number-badge">16</span>
+            <span class="cat-label-front">QUOTIDIEN</span>
+            <span class="cat-icon-front" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-16-prendre-soin-des-lieux.png" alt="Illustration pour Prendre soin des lieux" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Prendre soin —</div>
+            <h2 class="card-title-front">Prendre soin des lieux</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-16</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-QUOTIDIEN">
+            <span class="number-badge">16</span>
+            <span class="back-title">Prendre soin des lieux</span>
+            <span class="back-icon" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Participer à l’amélioration des parcs, des places, des équipements et des espaces publics.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box QUOTIDIEN">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Choisis un lieu de ta commune et propose une amélioration concrète.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Améliorer la vie quotidienne</span>
+              <span>CME-16</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-17 : Donner son avis sur la cantine (double-clic pour vue PowerPoint 16:9)" data-id="CME-17" data-category="QUOTIDIEN">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-QUOTIDIEN">
+          <div class="card-front-top">
+            <span class="number-badge">17</span>
+            <span class="cat-label-front">QUOTIDIEN</span>
+            <span class="cat-icon-front" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-17-avis-sur-la-cantine.png" alt="Illustration pour Donner son avis sur la cantine" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Donner son avis —</div>
+            <h2 class="card-title-front">Donner son avis sur la cantine</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-17</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-QUOTIDIEN">
+            <span class="number-badge">17</span>
+            <span class="back-title">Donner son avis sur la cantine</span>
+            <span class="back-icon" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Participer à une consultation sur les menus, le gaspillage, l’accueil ou l’équilibre des repas.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box QUOTIDIEN">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Imagine une solution simple pour réduire le gaspillage alimentaire à la cantine.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Améliorer la vie quotidienne</span>
+              <span>CME-17</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-18 : Penser à la sécurité (double-clic pour vue PowerPoint 16:9)" data-id="CME-18" data-category="QUOTIDIEN">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-QUOTIDIEN">
+          <div class="card-front-top">
+            <span class="number-badge">18</span>
+            <span class="cat-label-front">QUOTIDIEN</span>
+            <span class="cat-icon-front" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-18-penser-a-la-securite.png" alt="Illustration pour Penser à la sécurité" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Prévenir —</div>
+            <h2 class="card-title-front">Penser à la sécurité</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-18</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-QUOTIDIEN">
+            <span class="number-badge">18</span>
+            <span class="back-title">Penser à la sécurité</span>
+            <span class="back-icon" aria-hidden="true">🏫</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Identifier des situations dangereuses et proposer de la prévention : route, écrans, harcèlement, premiers secours ou lieux publics.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box QUOTIDIEN">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Crée un conseil de sécurité utile en une seule phrase.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Améliorer la vie quotidienne</span>
+              <span>CME-18</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-19 : Protéger la nature (double-clic pour vue PowerPoint 16:9)" data-id="CME-19" data-category="SOLIDARITE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-SOLIDARITE">
+          <div class="card-front-top">
+            <span class="number-badge">19</span>
+            <span class="cat-label-front">SOLIDARITE</span>
+            <span class="cat-icon-front" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-19-proteger-la-nature.png" alt="Illustration pour Protéger la nature" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Protéger —</div>
+            <h2 class="card-title-front">Protéger la nature</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-19</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-SOLIDARITE">
+            <span class="number-badge">19</span>
+            <span class="back-title">Protéger la nature</span>
+            <span class="back-icon" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Imaginer des actions pour la biodiversité, les déchets, l’eau, les économies d’énergie ou les espaces verts.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box SOLIDARITE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelle action peut aider à la fois les habitants et les animaux ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Agir pour tous</span>
+              <span>CME-19</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-20 : Réduire les déchets (double-clic pour vue PowerPoint 16:9)" data-id="CME-20" data-category="SOLIDARITE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-SOLIDARITE">
+          <div class="card-front-top">
+            <span class="number-badge">20</span>
+            <span class="cat-label-front">SOLIDARITE</span>
+            <span class="cat-icon-front" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-20-reduire-les-dechets.png" alt="Illustration pour Réduire les déchets" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Réduire —</div>
+            <h2 class="card-title-front">Réduire les déchets</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-20</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-SOLIDARITE">
+            <span class="number-badge">20</span>
+            <span class="back-title">Réduire les déchets</span>
+            <span class="back-icon" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Encourager le réemploi, le tri, la réparation et la lutte contre le gaspillage.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box SOLIDARITE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quel objet peux-tu donner, réparer ou réutiliser plutôt que jeter ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Agir pour tous</span>
+              <span>CME-20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-21 : Être solidaire (double-clic pour vue PowerPoint 16:9)" data-id="CME-21" data-category="SOLIDARITE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-SOLIDARITE">
+          <div class="card-front-top">
+            <span class="number-badge">21</span>
+            <span class="cat-label-front">SOLIDARITE</span>
+            <span class="cat-icon-front" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-21-etre-solidaire.png" alt="Illustration pour Être solidaire" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            
+            <h2 class="card-title-front">Être solidaire</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-21</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-SOLIDARITE">
+            <span class="number-badge">21</span>
+            <span class="back-title">Être solidaire</span>
+            <span class="back-icon" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Penser aux personnes isolées, âgées, malades, en difficulté ou victimes d’exclusion.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box SOLIDARITE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Imagine une action qui crée du lien entre les enfants et les personnes âgées.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Agir pour tous</span>
+              <span>CME-21</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-22 : Faire vivre le respect (double-clic pour vue PowerPoint 16:9)" data-id="CME-22" data-category="SOLIDARITE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-SOLIDARITE">
+          <div class="card-front-top">
+            <span class="number-badge">22</span>
+            <span class="cat-label-front">SOLIDARITE</span>
+            <span class="cat-icon-front" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-22-faire-vivre-le-respect.png" alt="Illustration pour Faire vivre le respect" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Respecter —</div>
+            <h2 class="card-title-front">Faire vivre le respect</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-22</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-SOLIDARITE">
+            <span class="number-badge">22</span>
+            <span class="back-title">Faire vivre le respect</span>
+            <span class="back-icon" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Lutter contre les discriminations, les moqueries et les incivilités ; favoriser l’égalité et le vivre-ensemble.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box SOLIDARITE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Écris une règle de respect qui devrait s’appliquer à tous les habitants.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Agir pour tous</span>
+              <span>CME-22</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-23 : Connaître nos droits (double-clic pour vue PowerPoint 16:9)" data-id="CME-23" data-category="SOLIDARITE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-SOLIDARITE">
+          <div class="card-front-top">
+            <span class="number-badge">23</span>
+            <span class="cat-label-front">SOLIDARITE</span>
+            <span class="cat-icon-front" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-23-connaitre-nos-droits.png" alt="Illustration pour Connaître nos droits" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Informer —</div>
+            <h2 class="card-title-front">Connaître nos droits</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-23</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-SOLIDARITE">
+            <span class="number-badge">23</span>
+            <span class="back-title">Connaître nos droits</span>
+            <span class="back-icon" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Informer les autres enfants sur leurs droits : protection, santé, éducation, loisirs, expression et égalité.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box SOLIDARITE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Choisis un droit de l’enfant et imagine une affiche pour l’expliquer.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Agir pour tous</span>
+              <span>CME-23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-24 : Raconter son projet (double-clic pour vue PowerPoint 16:9)" data-id="CME-24" data-category="SOLIDARITE">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-SOLIDARITE">
+          <div class="card-front-top">
+            <span class="number-badge">24</span>
+            <span class="cat-label-front">SOLIDARITE</span>
+            <span class="cat-icon-front" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-24-raconter-son-projet.png" alt="Illustration pour Raconter son projet" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Informer —</div>
+            <h2 class="card-title-front">Raconter son projet</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-24</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-SOLIDARITE">
+            <span class="number-badge">24</span>
+            <span class="back-title">Raconter son projet</span>
+            <span class="back-icon" aria-hidden="true">🌱</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Informer les élèves et les habitants avec une affiche, un journal, une exposition, une vidéo, un podcast ou une présentation publique.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box SOLIDARITE">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Rédige le titre d’un article annonçant votre projet.</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Agir pour tous</span>
+              <span>CME-24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-25 : Représenter les élèves (double-clic pour vue PowerPoint 16:9)" data-id="CME-25" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">25</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-25-representer-les-eleves.png" alt="Illustration pour Représenter les élèves" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Représenter —</div>
+            <h2 class="card-title-front">Représenter les élèves</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-25</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">25</span>
+            <span class="back-title">Représenter les élèves</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Le ou la déléguée recueille les avis des élèves, les présente au conseil et explique ensuite les décisions prises.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Comment peux-tu vérifier que ton avis représente aussi celui des autres élèves ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-26 : Dialoguer avec les élus (double-clic pour vue PowerPoint 16:9)" data-id="CME-26" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">26</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-26-dialoguer-avec-les-elus.png" alt="Illustration pour Dialoguer avec les élus" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Dialoguer —</div>
+            <h2 class="card-title-front">Dialoguer avec les élus</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-26</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">26</span>
+            <span class="back-title">Dialoguer avec les élus</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Les élus adultes écoutent les propositions, expliquent les contraintes et accompagnent les projets sans décider à la place des enfants.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelle différence vois-tu entre écouter une idée et pouvoir immédiatement la réaliser ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-26</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-27 : Animer le groupe (double-clic pour vue PowerPoint 16:9)" data-id="CME-27" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">27</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-27-animer-le-groupe.png" alt="Illustration pour Animer le groupe" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Animer —</div>
+            <h2 class="card-title-front">Animer le groupe</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-27</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">27</span>
+            <span class="back-title">Animer le groupe</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">L’animateur ou l’animatrice aide le groupe à s’organiser, à respecter la parole de chacun et à réaliser ses projets.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelle règle peut aider un groupe à mieux travailler ensemble ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-27</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-28 : Mobiliser les services (double-clic pour vue PowerPoint 16:9)" data-id="CME-28" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">28</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-28-mobiliser-les-services.png" alt="Illustration pour Mobiliser les services" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Mobiliser —</div>
+            <h2 class="card-title-front">Mobiliser les services</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-28</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">28</span>
+            <span class="back-title">Mobiliser les services</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Les services municipaux apportent leur savoir-faire : espaces verts, voirie, écoles, culture, sport, communication ou bâtiments.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quel service municipal pourrait aider à installer plus de plantes dans la cour de l’école ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-28</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-29 : Trouver une idée (double-clic pour vue PowerPoint 16:9)" data-id="CME-29" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">29</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-29-trouver-une-idee.png" alt="Illustration pour Trouver une idée" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Imaginer —</div>
+            <h2 class="card-title-front">Trouver une idée</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-29</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">29</span>
+            <span class="back-title">Trouver une idée</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Un projet commence par un besoin observé ou exprimé par les enfants, les habitants ou les associations.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quel problème concret voudrais-tu améliorer dans ton école ou ton quartier ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-29</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-30 : Choisir un objectif (double-clic pour vue PowerPoint 16:9)" data-id="CME-30" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">30</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-30-choisir-un-objectif.png" alt="Illustration pour Choisir un objectif" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Planifier —</div>
+            <h2 class="card-title-front">Choisir un objectif</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-30</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">30</span>
+            <span class="back-title">Choisir un objectif</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Définir ce que l’on veut changer, pour qui et comment savoir si le projet a réussi.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Complète cette phrase : « Notre projet réussira si… »</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-31 : Prévoir les moyens (double-clic pour vue PowerPoint 16:9)" data-id="CME-31" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">31</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-31-prevoir-les-moyens.png" alt="Illustration pour Prévoir les moyens" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Prévoir —</div>
+            <h2 class="card-title-front">Prévoir les moyens</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-31</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">31</span>
+            <span class="back-title">Prévoir les moyens</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Réfléchir au temps, aux personnes, au matériel et au budget nécessaires pour réaliser un projet.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">De quoi auriez-vous besoin pour organiser une journée de jeux dans votre commune ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-31</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="card-container" tabindex="0" role="region" aria-label="Carte CME-32 : Évaluer et améliorer (double-clic pour vue PowerPoint 16:9)" data-id="CME-32" data-category="PROJET">
+      <div class="card-inner">
+        <!-- RECTO -->
+        <div class="card-front bg-PROJET">
+          <div class="card-front-top">
+            <span class="number-badge">32</span>
+            <span class="cat-label-front">PROJET</span>
+            <span class="cat-icon-front" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-front-center">
+            <div class="disc-white">
+              <img src="assets/cme-32-evaluer-et-ameliorer.png" alt="Illustration pour Évaluer et améliorer" loading="lazy">
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <div class="action-verb-badge">— Évaluer —</div>
+            <h2 class="card-title-front">Évaluer et améliorer</h2>
+          </div>
+          <div class="card-front-footer">
+            <span>CME</span>
+            <span>CME-32</span>
+          </div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-back">
+          <div class="card-back-banner bg-PROJET">
+            <span class="number-badge">32</span>
+            <span class="back-title">Évaluer et améliorer</span>
+            <span class="back-icon" aria-hidden="true">🛠️</span>
+          </div>
+          <div class="card-back-body">
+            <div class="mission-block">
+              <div class="mission-intro">Au CME, je peux…</div>
+              <p class="mission-text">Faire le bilan : ce qui a réussi, ce qui a été difficile et ce qui peut être amélioré pour la suite.</p>
+            </div>
+            <div class="back-separator" role="separator"></div>
+            <div class="challenge-box PROJET">
+              <div class="challenge-header">
+                <span aria-hidden="true">💡</span>
+                <span>Défi</span>
+              </div>
+              <p class="challenge-text">Quelle question poserais-tu aux habitants après la réalisation d’un projet ?</p>
+            </div>
+            <div class="card-back-footer">
+              <span>Rôles et conduite de projet</span>
+              <span>CME-32</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    </section>
+  </main>
+
+  <!-- Modale Plein Écran pour la Pioche Aléatoire -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Carte piochée en grand format">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fermer la vue plein écran">✕</button>
+      <div id="modalSlot"></div>
+    </div>
+  </div>
+
+  <!-- NOUVEAU : Diaporama Présentation PowerPoint 16:9 Plein Écran -->
+  <div class="presentation-overlay" id="presentationOverlay" role="dialog" aria-modal="true" aria-label="Diaporama PowerPoint 16:9">
+    <div class="presentation-toolbar">
+      <div class="presentation-info" id="presInfo">Carte CME-01 — RECTO</div>
+      <div class="presentation-controls">
+        <button class="presentation-btn" id="presPrevBtn" title="Carte ou face précédente (Touche Flèche Gauche)">⬅ Précédent</button>
+        <button class="presentation-btn" id="presFlipBtn" title="Basculer Recto / Verso (Touche Espace)">🔄 Retourner</button>
+        <button class="presentation-btn" id="presNextBtn" title="Carte ou face suivante (Touche Flèche Droite)">Suivant ➡</button>
+        <button class="presentation-btn" id="presCloseBtn" title="Quitter le diaporama (Touche Échap)">✕ Fermer</button>
+      </div>
+    </div>
+    <div class="presentation-slide-frame" id="presentationFrame">
+      <!-- Rendu dynamique de la diapositive PowerPoint 16:9 -->
+    </div>
+  </div>
+
+  <!-- Données JSON des cartes embarquées pour le mode diaporama -->
+  <script type="application/json" id="cmeCardsData">
+[{"id": "CME-01", "number": 1, "status": "core", "category_code": "DEMOCRATIE", "category_label": "Démocratie et représentation", "category_icon": "🗳️", "action_verb": "Être élu·e", "title": "Être élu·e", "front_label": "Je représente ma classe", "pictogram": "🗳️", "image_prompt_id": "CME-01", "image_file": "assets/generated/pictograms/cme-01-etre-elue.png", "mission_intro": "Au CME, je peux…", "mission_text": "Participer à une élection : se présenter, expliquer ses idées, voter dans le respect des règles.", "challenge_label": "Défi", "challenge_text": "Quelle promesse réaliste pourrais-tu faire à tes camarades ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["S'exprimer à l'oral", "Comprendre le vote", "Représenter les autres"], "keywords": ["élection", "vote", "candidature", "représentation"], "alternative_text": "Une urne électorale, un bulletin de vote et des enfants participant à une élection.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-02", "number": 2, "status": "core", "category_code": "DEMOCRATIE", "category_label": "Démocratie et représentation", "category_icon": "🗳️", "action_verb": "Faire campagne", "title": "Faire campagne", "front_label": "Je présente mes idées", "pictogram": "📣", "image_prompt_id": "CME-02", "image_file": "assets/generated/pictograms/cme-02-faire-campagne.png", "mission_intro": "Au CME, je peux…", "mission_text": "Présenter son programme et convaincre sans se moquer ni promettre l’impossible.", "challenge_label": "Défi", "challenge_text": "Crée un slogan de huit mots maximum pour une candidature au CME.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Argumenter", "Écrire un message court", "Respecter les autres"], "keywords": ["programme", "slogan", "candidature", "engagement"], "alternative_text": "Une enfant présente une affiche de campagne devant plusieurs camarades.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-03", "number": 3, "status": "core", "category_code": "DEMOCRATIE", "category_label": "Démocratie et représentation", "category_icon": "🗳️", "action_verb": "Écouter", "title": "Écouter les élèves", "front_label": "Je recueille les idées", "pictogram": "👂", "image_prompt_id": "CME-03", "image_file": "assets/generated/pictograms/cme-03-ecouter-les-eleves.png", "mission_intro": "Au CME, je peux…", "mission_text": "Recueillir les besoins, les idées et les problèmes des autres enfants. Un élu est un relais.", "challenge_label": "Défi", "challenge_text": "Invente trois questions pour consulter les élèves de ta classe.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Écouter", "Questionner", "Restituer une information"], "keywords": ["consultation", "questionnaire", "besoins", "représentation"], "alternative_text": "Un enfant écoute plusieurs camarades qui partagent leurs idées.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-04", "number": 4, "status": "core", "category_code": "DEMOCRATIE", "category_label": "Démocratie et représentation", "category_icon": "🗳️", "action_verb": "Prendre la parole", "title": "Prendre la parole", "front_label": "J’exprime une idée", "pictogram": "🗣️", "image_prompt_id": "CME-04", "image_file": "assets/generated/pictograms/cme-04-prendre-la-parole.png", "mission_intro": "Au CME, je peux…", "mission_text": "Exprimer une idée clairement, donner des exemples et respecter le temps de parole de chacun.", "challenge_label": "Défi", "challenge_text": "Explique une proposition utile pour ta commune en trente secondes.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Expression orale", "Argumentation", "Écoute"], "keywords": ["oral", "argument", "réunion", "confiance"], "alternative_text": "Une élève parle devant un petit groupe assis en cercle.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-05", "number": 5, "status": "core", "category_code": "DEMOCRATIE", "category_label": "Démocratie et représentation", "category_icon": "🗳️", "action_verb": "Débattre", "title": "Débattre", "front_label": "J’écoute les avis différents", "pictogram": "🤝", "image_prompt_id": "CME-05", "image_file": "assets/generated/pictograms/cme-05-debattre.png", "mission_intro": "Au CME, je peux…", "mission_text": "Comparer plusieurs opinions, argumenter et accepter que l’on ne soit pas toujours d’accord.", "challenge_label": "Défi", "challenge_text": "Transforme « je ne suis pas d’accord » en une phrase constructive.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Argumenter", "Écouter", "Respecter des opinions différentes"], "keywords": ["débat", "opinion", "respect", "argumentation"], "alternative_text": "Deux enfants discutent avec respect autour d’une table de réunion.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-06", "number": 6, "status": "core", "category_code": "DEMOCRATIE", "category_label": "Démocratie et représentation", "category_icon": "🗳️", "action_verb": "Décider ensemble", "title": "Décider ensemble", "front_label": "Je choisis avec les autres", "pictogram": "✋", "image_prompt_id": "CME-06", "image_file": "assets/generated/pictograms/cme-06-decider-ensemble.png", "mission_intro": "Au CME, je peux…", "mission_text": "Chercher un compromis ou voter lorsqu’il faut choisir entre plusieurs solutions.", "challenge_label": "Défi", "challenge_text": "Comment choisir entre un jardin partagé et un terrain de jeux si le budget ne permet qu’un seul projet ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Décider", "Coopérer", "Comprendre un compromis"], "keywords": ["vote", "choix", "compromis", "décision"], "alternative_text": "Des enfants lèvent la main pour participer à une décision collective.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-07", "number": 7, "status": "core", "category_code": "COMMUNE", "category_label": "Comprendre la commune", "category_icon": "🏛️", "action_verb": "Comprendre", "title": "Comprendre la mairie", "front_label": "Je découvre ma commune", "pictogram": "🏛️", "image_prompt_id": "CME-07", "image_file": "assets/generated/pictograms/cme-07-comprendre-la-mairie.png", "mission_intro": "Au CME, je peux…", "mission_text": "Découvrir ce que fait une commune : écoles, rues, parcs, sports, culture, solidarité et restauration scolaire.", "challenge_label": "Défi", "challenge_text": "Cite trois services municipaux que tu utilises dans ta vie quotidienne.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Identifier les services publics", "Se repérer dans la commune"], "keywords": ["mairie", "commune", "services publics", "territoire"], "alternative_text": "Une mairie stylisée entourée d’enfants et de services municipaux.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-08", "number": 8, "status": "core", "category_code": "COMMUNE", "category_label": "Comprendre la commune", "category_icon": "🏛️", "action_verb": "Rencontrer", "title": "Rencontrer les élus", "front_label": "Je dialogue avec les adultes", "pictogram": "👥", "image_prompt_id": "CME-08", "image_file": "assets/generated/pictograms/cme-08-rencontrer-les-elus.png", "mission_intro": "Au CME, je peux…", "mission_text": "Dialoguer avec le maire, les adjoints et les conseillers municipaux pour présenter des idées ou poser des questions.", "challenge_label": "Défi", "challenge_text": "Prépare une question utile à poser au maire de ta commune.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Questionner", "Dialoguer", "Préparer une intervention"], "keywords": ["maire", "élus", "dialogue", "conseil municipal"], "alternative_text": "Des enfants échangent avec des élus autour d’une table municipale.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-09", "number": 9, "status": "core", "category_code": "COMMUNE", "category_label": "Comprendre la commune", "category_icon": "🏛️", "action_verb": "Observer", "title": "Observer son quartier", "front_label": "Je regarde ce qui peut changer", "pictogram": "🧭", "image_prompt_id": "CME-09", "image_file": "assets/generated/pictograms/cme-09-observer-son-quartier.png", "mission_intro": "Au CME, je peux…", "mission_text": "Regarder ce qui fonctionne, ce qui manque et ce qui pourrait être amélioré autour de l’école ou dans le quartier.", "challenge_label": "Défi", "challenge_text": "Dessine un trajet et place deux endroits qui pourraient être améliorés.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Observer", "Se repérer", "Décrire un lieu"], "keywords": ["quartier", "diagnostic", "carte", "observation"], "alternative_text": "Des enfants observent une rue et consultent une petite carte de quartier.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-10", "number": 10, "status": "core", "category_code": "COMMUNE", "category_label": "Comprendre la commune", "category_icon": "🏛️", "action_verb": "Enquêter", "title": "Enquêter", "front_label": "Je cherche avant de proposer", "pictogram": "🔎", "image_prompt_id": "CME-10", "image_file": "assets/generated/pictograms/cme-10-enqueter.png", "mission_intro": "Au CME, je peux…", "mission_text": "Chercher des informations avant de proposer une solution : sondage, visite, observation, entretien ou recherche documentaire.", "challenge_label": "Défi", "challenge_text": "Quelles personnes pourrais-tu interroger pour améliorer un parc ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Rechercher", "Questionner", "Vérifier une information"], "keywords": ["enquête", "sondage", "entretien", "observation"], "alternative_text": "Une enfant utilise une loupe, un carnet et un questionnaire pour mener une enquête.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-11", "number": 11, "status": "core", "category_code": "COMMUNE", "category_label": "Comprendre la commune", "category_icon": "🏛️", "action_verb": "Coopérer", "title": "Travailler en commission", "front_label": "Je travaille en petit groupe", "pictogram": "🧩", "image_prompt_id": "CME-11", "image_file": "assets/generated/pictograms/cme-11-travailler-en-commission.png", "mission_intro": "Au CME, je peux…", "mission_text": "Se répartir en petits groupes selon des thèmes : environnement, solidarité, loisirs, école ou mobilité.", "challenge_label": "Défi", "challenge_text": "Choisis une commission et explique pourquoi tu aimerais y participer.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Coopérer", "Répartir les tâches", "Construire un projet"], "keywords": ["commission", "groupe", "coopération", "thème"], "alternative_text": "Quatre enfants travaillent ensemble sur une affiche de projet.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-12", "number": 12, "status": "core", "category_code": "COMMUNE", "category_label": "Comprendre la commune", "category_icon": "🏛️", "action_verb": "Organiser", "title": "Préparer une réunion", "front_label": "Je prépare les étapes", "pictogram": "📋", "image_prompt_id": "CME-12", "image_file": "assets/generated/pictograms/cme-12-preparer-une-reunion.png", "mission_intro": "Au CME, je peux…", "mission_text": "Construire un ordre du jour, noter les décisions et prévoir les prochaines étapes.", "challenge_label": "Défi", "challenge_text": "Rédige un ordre du jour de trois points pour améliorer la cour de récréation.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Organiser", "Prendre des notes", "Planifier"], "keywords": ["réunion", "ordre du jour", "compte rendu", "organisation"], "alternative_text": "Un carnet, une liste de réunion et des enfants autour d’une table.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-13", "number": 13, "status": "core", "category_code": "QUOTIDIEN", "category_label": "Améliorer la vie quotidienne", "category_icon": "🏫", "action_verb": "Améliorer", "title": "Améliorer l’école", "front_label": "Je pense au bien-être à l’école", "pictogram": "🏫", "image_prompt_id": "CME-13", "image_file": "assets/generated/pictograms/cme-13-ameliorer-lecole.png", "mission_intro": "Au CME, je peux…", "mission_text": "Proposer des idées sur le bien-être, la cour, les repas, l’égalité ou le respect à l’école.", "challenge_label": "Défi", "challenge_text": "Quelle amélioration serait utile au plus grand nombre d’élèves ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Identifier un besoin", "Proposer", "Hiérarchiser"], "keywords": ["école", "cour", "bien-être", "égalité"], "alternative_text": "Des élèves imaginent des améliorations pour leur école et leur cour.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-14", "number": 14, "status": "core", "category_code": "QUOTIDIEN", "category_label": "Améliorer la vie quotidienne", "category_icon": "🏫", "action_verb": "Se déplacer", "title": "Faciliter les déplacements", "front_label": "Je rends les trajets plus sûrs", "pictogram": "🚲", "image_prompt_id": "CME-14", "image_file": "assets/generated/pictograms/cme-14-faciliter-les-deplacements.png", "mission_intro": "Au CME, je peux…", "mission_text": "Réfléchir aux trajets à pied, à vélo, en bus ou en voiture, et à la sécurité autour des écoles.", "challenge_label": "Défi", "challenge_text": "Repère un danger possible sur le chemin de l’école et propose une solution.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Se déplacer", "Prévenir", "Observer l’espace"], "keywords": ["vélo", "route", "sécurité", "mobilité"], "alternative_text": "Des enfants marchent et roulent à vélo sur un trajet sécurisé vers l’école.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-15", "number": 15, "status": "core", "category_code": "QUOTIDIEN", "category_label": "Améliorer la vie quotidienne", "category_icon": "🏫", "action_verb": "Imaginer", "title": "Imaginer des loisirs", "front_label": "Je crée des activités pour tous", "pictogram": "🛝", "image_prompt_id": "CME-15", "image_file": "assets/generated/pictograms/cme-15-imaginer-des-loisirs.png", "mission_intro": "Au CME, je peux…", "mission_text": "Proposer des activités, des espaces de jeux ou des événements sportifs, culturels et intergénérationnels.", "challenge_label": "Défi", "challenge_text": "Conçois une activité gratuite ouverte à tous les enfants de la commune.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Créer", "Inclure", "Concevoir un événement"], "keywords": ["loisirs", "sport", "culture", "jeux"], "alternative_text": "Des enfants jouent, lisent et pratiquent une activité sportive dans un espace public.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-16", "number": 16, "status": "core", "category_code": "QUOTIDIEN", "category_label": "Améliorer la vie quotidienne", "category_icon": "🏫", "action_verb": "Prendre soin", "title": "Prendre soin des lieux", "front_label": "Je rends les espaces agréables", "pictogram": "🏞️", "image_prompt_id": "CME-16", "image_file": "assets/generated/pictograms/cme-16-prendre-soin-des-lieux.png", "mission_intro": "Au CME, je peux…", "mission_text": "Participer à l’amélioration des parcs, des places, des équipements et des espaces publics.", "challenge_label": "Défi", "challenge_text": "Choisis un lieu de ta commune et propose une amélioration concrète.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Décrire un espace", "Proposer", "Penser l’intérêt général"], "keywords": ["parc", "place", "équipement", "espace public"], "alternative_text": "Des enfants améliorent un parc municipal avec des bancs, des plantes et des jeux.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-17", "number": 17, "status": "core", "category_code": "QUOTIDIEN", "category_label": "Améliorer la vie quotidienne", "category_icon": "🏫", "action_verb": "Donner son avis", "title": "Donner son avis sur la cantine", "front_label": "Je participe aux choix du repas", "pictogram": "🍽️", "image_prompt_id": "CME-17", "image_file": "assets/generated/pictograms/cme-17-avis-sur-la-cantine.png", "mission_intro": "Au CME, je peux…", "mission_text": "Participer à une consultation sur les menus, le gaspillage, l’accueil ou l’équilibre des repas.", "challenge_label": "Défi", "challenge_text": "Imagine une solution simple pour réduire le gaspillage alimentaire à la cantine.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Donner son avis", "Réduire le gaspillage", "Proposer"], "keywords": ["cantine", "repas", "gaspillage", "alimentation"], "alternative_text": "Des enfants donnent leur avis sur les repas scolaires et trient les déchets alimentaires.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-18", "number": 18, "status": "core", "category_code": "QUOTIDIEN", "category_label": "Améliorer la vie quotidienne", "category_icon": "🏫", "action_verb": "Prévenir", "title": "Penser à la sécurité", "front_label": "Je cherche des solutions sûres", "pictogram": "🦺", "image_prompt_id": "CME-18", "image_file": "assets/generated/pictograms/cme-18-penser-a-la-securite.png", "mission_intro": "Au CME, je peux…", "mission_text": "Identifier des situations dangereuses et proposer de la prévention : route, écrans, harcèlement, premiers secours ou lieux publics.", "challenge_label": "Défi", "challenge_text": "Crée un conseil de sécurité utile en une seule phrase.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Prévenir", "Identifier un risque", "Informer"], "keywords": ["sécurité", "prévention", "harcèlement", "premiers secours"], "alternative_text": "Des enfants repèrent un passage piéton et une signalisation de sécurité.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-19", "number": 19, "status": "core", "category_code": "SOLIDARITE", "category_label": "Agir pour tous", "category_icon": "🌱", "action_verb": "Protéger", "title": "Protéger la nature", "front_label": "Je prends soin du vivant", "pictogram": "🌱", "image_prompt_id": "CME-19", "image_file": "assets/generated/pictograms/cme-19-proteger-la-nature.png", "mission_intro": "Au CME, je peux…", "mission_text": "Imaginer des actions pour la biodiversité, les déchets, l’eau, les économies d’énergie ou les espaces verts.", "challenge_label": "Défi", "challenge_text": "Quelle action peut aider à la fois les habitants et les animaux ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Agir pour l’environnement", "Observer", "Proposer"], "keywords": ["nature", "biodiversité", "eau", "énergie"], "alternative_text": "Des enfants plantent des fleurs et installent un abri pour les insectes dans un jardin communal.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-20", "number": 20, "status": "core", "category_code": "SOLIDARITE", "category_label": "Agir pour tous", "category_icon": "🌱", "action_verb": "Réduire", "title": "Réduire les déchets", "front_label": "Je donne une seconde vie aux objets", "pictogram": "♻️", "image_prompt_id": "CME-20", "image_file": "assets/generated/pictograms/cme-20-reduire-les-dechets.png", "mission_intro": "Au CME, je peux…", "mission_text": "Encourager le réemploi, le tri, la réparation et la lutte contre le gaspillage.", "challenge_label": "Défi", "challenge_text": "Quel objet peux-tu donner, réparer ou réutiliser plutôt que jeter ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Trier", "Réemployer", "Consommer autrement"], "keywords": ["déchets", "recyclage", "réparation", "réemploi"], "alternative_text": "Des enfants trient, réparent et réutilisent des objets dans un atelier collectif.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-21", "number": 21, "status": "core", "category_code": "SOLIDARITE", "category_label": "Agir pour tous", "category_icon": "🌱", "action_verb": "Être solidaire", "title": "Être solidaire", "front_label": "Je pense aux autres", "pictogram": "❤️", "image_prompt_id": "CME-21", "image_file": "assets/generated/pictograms/cme-21-etre-solidaire.png", "mission_intro": "Au CME, je peux…", "mission_text": "Penser aux personnes isolées, âgées, malades, en difficulté ou victimes d’exclusion.", "challenge_label": "Défi", "challenge_text": "Imagine une action qui crée du lien entre les enfants et les personnes âgées.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Faire preuve d’empathie", "Coopérer", "S’engager"], "keywords": ["solidarité", "personnes âgées", "entraide", "inclusion"], "alternative_text": "Des enfants rendent visite à une personne âgée et partagent une activité créative.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-22", "number": 22, "status": "core", "category_code": "SOLIDARITE", "category_label": "Agir pour tous", "category_icon": "🌱", "action_verb": "Respecter", "title": "Faire vivre le respect", "front_label": "Je fais vivre l’égalité", "pictogram": "🫶", "image_prompt_id": "CME-22", "image_file": "assets/generated/pictograms/cme-22-faire-vivre-le-respect.png", "mission_intro": "Au CME, je peux…", "mission_text": "Lutter contre les discriminations, les moqueries et les incivilités ; favoriser l’égalité et le vivre-ensemble.", "challenge_label": "Défi", "challenge_text": "Écris une règle de respect qui devrait s’appliquer à tous les habitants.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Respecter", "Coopérer", "Comprendre l’égalité"], "keywords": ["respect", "égalité", "discrimination", "vivre-ensemble"], "alternative_text": "Des enfants différents se tiennent ensemble autour d’un symbole de respect.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-23", "number": 23, "status": "core", "category_code": "SOLIDARITE", "category_label": "Agir pour tous", "category_icon": "🌱", "action_verb": "Informer", "title": "Connaître nos droits", "front_label": "Je fais connaître les droits des enfants", "pictogram": "🧒", "image_prompt_id": "CME-23", "image_file": "assets/generated/pictograms/cme-23-connaitre-nos-droits.png", "mission_intro": "Au CME, je peux…", "mission_text": "Informer les autres enfants sur leurs droits : protection, santé, éducation, loisirs, expression et égalité.", "challenge_label": "Défi", "challenge_text": "Choisis un droit de l’enfant et imagine une affiche pour l’expliquer.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Identifier un droit", "Informer", "Créer un message"], "keywords": ["droits", "enfant", "protection", "éducation"], "alternative_text": "Des enfants présentent une affiche colorée sur les droits de l’enfant.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-24", "number": 24, "status": "core", "category_code": "SOLIDARITE", "category_label": "Agir pour tous", "category_icon": "🌱", "action_verb": "Informer", "title": "Raconter son projet", "front_label": "Je partage notre action", "pictogram": "📢", "image_prompt_id": "CME-24", "image_file": "assets/generated/pictograms/cme-24-raconter-son-projet.png", "mission_intro": "Au CME, je peux…", "mission_text": "Informer les élèves et les habitants avec une affiche, un journal, une exposition, une vidéo, un podcast ou une présentation publique.", "challenge_label": "Défi", "challenge_text": "Rédige le titre d’un article annonçant votre projet.", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Communiquer", "Informer", "Présenter un projet"], "keywords": ["communication", "journal", "affiche", "podcast"], "alternative_text": "Des enfants présentent leur projet sur une affiche devant des habitants.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-25", "number": 25, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Représenter", "title": "Représenter les élèves", "front_label": "Je fais le lien avec ma classe", "pictogram": "👤", "image_prompt_id": "CME-25", "image_file": "assets/generated/pictograms/cme-25-representer-les-eleves.png", "mission_intro": "Au CME, je peux…", "mission_text": "Le ou la déléguée recueille les avis des élèves, les présente au conseil et explique ensuite les décisions prises.", "challenge_label": "Défi", "challenge_text": "Comment peux-tu vérifier que ton avis représente aussi celui des autres élèves ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Représenter", "Écouter", "Restituer"], "keywords": ["délégué", "classe", "représentation", "consultation"], "alternative_text": "Une enfant écoute sa classe puis note les idées à transmettre au conseil.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-26", "number": 26, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Dialoguer", "title": "Dialoguer avec les élus", "front_label": "Je rencontre ceux qui décident", "pictogram": "🧑‍💼", "image_prompt_id": "CME-26", "image_file": "assets/generated/pictograms/cme-26-dialoguer-avec-les-elus.png", "mission_intro": "Au CME, je peux…", "mission_text": "Les élus adultes écoutent les propositions, expliquent les contraintes et accompagnent les projets sans décider à la place des enfants.", "challenge_label": "Défi", "challenge_text": "Quelle différence vois-tu entre écouter une idée et pouvoir immédiatement la réaliser ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Dialoguer", "Comprendre une contrainte", "Argumenter"], "keywords": ["élus", "maire", "dialogue", "décision"], "alternative_text": "Des enfants discutent avec une élue adulte dans une salle municipale.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-27", "number": 27, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Animer", "title": "Animer le groupe", "front_label": "Je fais avancer le groupe", "pictogram": "🛠️", "image_prompt_id": "CME-27", "image_file": "assets/generated/pictograms/cme-27-animer-le-groupe.png", "mission_intro": "Au CME, je peux…", "mission_text": "L’animateur ou l’animatrice aide le groupe à s’organiser, à respecter la parole de chacun et à réaliser ses projets.", "challenge_label": "Défi", "challenge_text": "Quelle règle peut aider un groupe à mieux travailler ensemble ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Coopérer", "Organiser", "Faciliter la parole"], "keywords": ["animation", "groupe", "règles", "coopération"], "alternative_text": "Une animatrice accompagne un groupe d’enfants réunis autour d’un projet.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-28", "number": 28, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Mobiliser", "title": "Mobiliser les services", "front_label": "Je cherche les bonnes personnes", "pictogram": "🏗️", "image_prompt_id": "CME-28", "image_file": "assets/generated/pictograms/cme-28-mobiliser-les-services.png", "mission_intro": "Au CME, je peux…", "mission_text": "Les services municipaux apportent leur savoir-faire : espaces verts, voirie, écoles, culture, sport, communication ou bâtiments.", "challenge_label": "Défi", "challenge_text": "Quel service municipal pourrait aider à installer plus de plantes dans la cour de l’école ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Identifier des partenaires", "Comprendre les métiers municipaux"], "keywords": ["services municipaux", "partenaires", "espaces verts", "voirie"], "alternative_text": "Des enfants discutent avec des agents municipaux près d’un parc et d’un bâtiment public.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-29", "number": 29, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Imaginer", "title": "Trouver une idée", "front_label": "Je pars d’un besoin", "pictogram": "💡", "image_prompt_id": "CME-29", "image_file": "assets/generated/pictograms/cme-29-trouver-une-idee.png", "mission_intro": "Au CME, je peux…", "mission_text": "Un projet commence par un besoin observé ou exprimé par les enfants, les habitants ou les associations.", "challenge_label": "Défi", "challenge_text": "Quel problème concret voudrais-tu améliorer dans ton école ou ton quartier ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Identifier un besoin", "Imaginer", "Formuler un problème"], "keywords": ["idée", "besoin", "problème", "projet"], "alternative_text": "Plusieurs enfants rassemblent leurs idées autour d’une ampoule lumineuse.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-30", "number": 30, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Planifier", "title": "Choisir un objectif", "front_label": "Je sais ce que je veux changer", "pictogram": "🎯", "image_prompt_id": "CME-30", "image_file": "assets/generated/pictograms/cme-30-choisir-un-objectif.png", "mission_intro": "Au CME, je peux…", "mission_text": "Définir ce que l’on veut changer, pour qui et comment savoir si le projet a réussi.", "challenge_label": "Défi", "challenge_text": "Complète cette phrase : « Notre projet réussira si… »", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Fixer un objectif", "Planifier", "Évaluer"], "keywords": ["objectif", "réussite", "projet", "évaluation"], "alternative_text": "Des enfants visent une cible avec une flèche et un plan de projet.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-31", "number": 31, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Prévoir", "title": "Prévoir les moyens", "front_label": "Je prépare ce qu’il faut", "pictogram": "💶", "image_prompt_id": "CME-31", "image_file": "assets/generated/pictograms/cme-31-prevoir-les-moyens.png", "mission_intro": "Au CME, je peux…", "mission_text": "Réfléchir au temps, aux personnes, au matériel et au budget nécessaires pour réaliser un projet.", "challenge_label": "Défi", "challenge_text": "De quoi auriez-vous besoin pour organiser une journée de jeux dans votre commune ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Prévoir", "Organiser", "Comprendre un budget"], "keywords": ["budget", "matériel", "temps", "ressources"], "alternative_text": "Des enfants préparent une liste avec du matériel, une horloge et des pièces symboliques.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}, {"id": "CME-32", "number": 32, "status": "extension", "category_code": "PROJET", "category_label": "Rôles et conduite de projet", "category_icon": "🛠️", "action_verb": "Évaluer", "title": "Évaluer et améliorer", "front_label": "Je fais le bilan", "pictogram": "✅", "image_prompt_id": "CME-32", "image_file": "assets/generated/pictograms/cme-32-evaluer-et-ameliorer.png", "mission_intro": "Au CME, je peux…", "mission_text": "Faire le bilan : ce qui a réussi, ce qui a été difficile et ce qui peut être amélioré pour la suite.", "challenge_label": "Défi", "challenge_text": "Quelle question poserais-tu aux habitants après la réalisation d’un projet ?", "age_levels": ["CM1", "CM2", "6e", "5e"], "skills": ["Évaluer", "Prendre du recul", "Améliorer"], "keywords": ["bilan", "évaluation", "amélioration", "projet"], "alternative_text": "Des enfants remplissent une fiche de bilan avec des coches et des idées d’amélioration.", "qr_url": "", "layout": {"front_variant": "standard", "back_variant": "standard", "title_size_override": null, "mission_size_override": null}}]
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

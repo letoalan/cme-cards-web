@@ -1254,3 +1254,28 @@ main.app-main {
     border: 1px dashed #ccc;
   }
 }
+
+/* ==========================================================================
+   Mise en valeur d'une carte ciblée (?card=CME-XX)
+   ========================================================================== */
+.card-container.highlighted-card {
+  outline: 4px solid var(--cat-democratie, #2F80ED);
+  outline-offset: 6px;
+  box-shadow: 0 0 24px rgba(47, 128, 237, 0.45);
+  transition: outline 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==========================================================================
+   Respect des préférences d'accessibilité (prefers-reduced-motion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

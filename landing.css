@@ -1,0 +1,1307 @@
+/* ==========================================================================
+   Design System & Feuille de style dédiée — Landing Page Cartes CME
+   Sans dépendance externe — Fonctionnement autonome 100% hors ligne (file://)
+   ========================================================================== */
+
+:root {
+  /* Charte des 5 familles de missions */
+  --democratie: #2F80ED;
+  --democratie-light: #EBF3FF;
+  --democratie-dark: #174A8A;
+
+  --commune: #7B61FF;
+  --commune-light: #F0EDFF;
+  --commune-dark: #46349B;
+
+  --quotidien: #F2994A;
+  --quotidien-light: #FEF3E8;
+  --quotidien-dark: #A44E09;
+
+  --solidarite: #27AE60;
+  --solidarite-light: #EAF8F0;
+  --solidarite-dark: #126336;
+
+  --projet: #F2C94C;
+  --projet-light: #FFFBEA;
+  --projet-dark: #806000;
+
+  /* Couleurs d'interface et contrastes */
+  --ink: #1F2937;
+  --ink-heading: #111827;
+  --muted: #4B5563;
+  --line: #E5E7EB;
+  --surface: #F9FAFB;
+  --surface-alt: #F3F4F6;
+  --white: #FFFFFF;
+
+  /* Typographie système locale */
+  --font-sans: "Aptos", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Layout & Espacements */
+  --max-width: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Ombres douces */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s ease;
+}
+
+/* Réinitialisation de base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Focus accessible et universel */
+:focus-visible {
+  outline: 3px solid var(--democratie);
+  outline-offset: 3px;
+}
+
+/* Skip link pour l'accessibilité au clavier */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 1rem;
+  background: var(--ink);
+  color: var(--white);
+  padding: 0.75rem 1.25rem;
+  z-index: 10000;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Conteneur principal */
+.landing-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ==========================================================================
+   1. Barre de navigation sticky et compacte
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--ink-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  padding: 0.4rem 0;
+  min-height: 44px;
+}
+
+.brand-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.45rem 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--ink-heading);
+  background-color: var(--surface-alt);
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--democratie-dark);
+  background-color: var(--democratie-light);
+}
+
+.nav-btn-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.5rem 1.1rem;
+  background-color: var(--democratie);
+  color: var(--white) !important;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(47, 128, 237, 0.3);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nav-btn-highlight:hover {
+  background-color: #256ecc;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(47, 128, 237, 0.4);
+}
+
+/* Bouton Menu Mobile */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: background-color var(--transition-fast);
+}
+
+.mobile-menu-toggle:hover {
+  background-color: var(--surface-alt);
+}
+
+.hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--ink);
+  margin: 4px 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   2. Boutons généraux
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  min-width: 44px;
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--democratie);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(47, 128, 237, 0.28);
+}
+
+.btn-primary:hover {
+  background-color: #246fc9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(47, 128, 237, 0.36);
+}
+
+.btn-secondary,
+.btn-outline {
+  background-color: var(--white);
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  background-color: var(--surface-alt);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-accent {
+  background-color: #7B61FF;
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(123, 97, 255, 0.28);
+}
+
+.btn-accent:hover {
+  background-color: #6a4ef5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(123, 97, 255, 0.36);
+}
+
+/* ==========================================================================
+   3. Hero — Première impression
+   ========================================================================== */
+.hero-section {
+  padding: 3.5rem 0 4.5rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  background-color: var(--democratie-light);
+  color: var(--democratie-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--ink-heading);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Éventail des 5 mini-cartes hero */
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-fan-container {
+  position: relative;
+  width: 280px;
+  height: 320px;
+}
+
+.hero-mini-card {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  top: 30px;
+  left: 50px;
+  transform-origin: bottom center;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-mini-card:hover {
+  z-index: 20 !important;
+  transform: translateY(-16px) scale(1.08) !important;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+.hero-mini-card.card-1 {
+  background-color: var(--democratie);
+  transform: rotate(-18deg) translate(-50px, 10px);
+  z-index: 1;
+}
+
+.hero-mini-card.card-2 {
+  background-color: var(--commune);
+  transform: rotate(-9deg) translate(-25px, 0px);
+  z-index: 2;
+}
+
+.hero-mini-card.card-3 {
+  background-color: var(--quotidien);
+  transform: rotate(0deg) translate(0px, -6px);
+  z-index: 3;
+}
+
+.hero-mini-card.card-4 {
+  background-color: var(--solidarite);
+  transform: rotate(9deg) translate(25px, 0px);
+  z-index: 4;
+}
+
+.hero-mini-card.card-5 {
+  background-color: var(--projet);
+  transform: rotate(18deg) translate(50px, 10px);
+  z-index: 5;
+}
+
+.mini-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.65rem;
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.hero-mini-card.card-5 .mini-card-header {
+  color: var(--ink);
+}
+
+.mini-card-badge {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+.hero-mini-card.card-5 .mini-card-badge {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.mini-card-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.mini-card-disc {
+  width: 90px;
+  height: 90px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mini-card-disc img {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+}
+
+.mini-card-footer {
+  padding: 0.5rem 0.6rem;
+  background: var(--white);
+  color: var(--ink-heading);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   4. Section « Qu’est-ce qu’un CME ? »
+   ========================================================================== */
+.section-presentation {
+  padding: 5rem 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--democratie);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ink-heading);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.08rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pillar-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-disc {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.pillar-disc img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+.pillar-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  margin-bottom: 0.75rem;
+}
+
+.pillar-text {
+  font-size: 0.96rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   5. Section « Les 5 familles de missions »
+   ========================================================================== */
+.section-families {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.families-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.family-panel {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--line);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.family-panel:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.family-panel.cat-DEMOCRATIE { border-top: 6px solid var(--democratie); }
+.family-panel.cat-COMMUNE { border-top: 6px solid var(--commune); }
+.family-panel.cat-QUOTIDIEN { border-top: 6px solid var(--quotidien); }
+.family-panel.cat-SOLIDARITE { border-top: 6px solid var(--solidarite); }
+.family-panel.cat-PROJET { border-top: 6px solid var(--projet); }
+
+.family-panel.cat-DEMOCRATIE:hover { border-color: var(--democratie); }
+.family-panel.cat-COMMUNE:hover { border-color: var(--commune); }
+.family-panel.cat-QUOTIDIEN:hover { border-color: var(--quotidien); }
+.family-panel.cat-SOLIDARITE:hover { border-color: var(--solidarite); }
+.family-panel.cat-PROJET:hover { border-color: var(--projet); }
+
+.family-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.family-disc {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.family-disc img {
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
+}
+
+.family-count-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: var(--surface-alt);
+  color: var(--muted);
+}
+
+.family-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.family-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.family-examples-box {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--line);
+}
+
+.family-examples-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.family-examples-list {
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.family-examples-list li {
+  position: relative;
+  padding-left: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.family-examples-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.family-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--democratie-dark);
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.family-action-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. Section « Comment utiliser le jeu ? »
+   ========================================================================== */
+.section-how-to {
+  padding: 5rem 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.step-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -16px;
+  left: 1.8rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--democratie);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(47, 128, 237, 0.35);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.how-to-cta {
+  text-align: center;
+}
+
+/* ==========================================================================
+   7. Section « Aperçu des cartes » (6 cartes dynamiques)
+   ========================================================================== */
+.section-preview {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.preview-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  text-decoration: none;
+  color: inherit;
+}
+
+.preview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.preview-card-header {
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.preview-card.bg-DEMOCRATIE .preview-card-header { background: var(--democratie); }
+.preview-card.bg-COMMUNE .preview-card-header { background: var(--commune); }
+.preview-card.bg-QUOTIDIEN .preview-card-header { background: var(--quotidien); }
+.preview-card.bg-SOLIDARITE .preview-card-header { background: var(--solidarite); }
+.preview-card.bg-PROJET .preview-card-header { background: var(--projet); color: var(--ink); }
+
+.preview-badge-num {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+.preview-card.bg-PROJET .preview-badge-num {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.preview-card-body {
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.preview-disc {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.preview-disc img {
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
+}
+
+.preview-verb-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.preview-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+}
+
+.preview-action {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-alt);
+  color: var(--ink-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.preview-card:hover .preview-action {
+  background: var(--democratie);
+  color: var(--white);
+}
+
+/* ==========================================================================
+   8. Section « Pour la classe et le collège »
+   ========================================================================== */
+.section-school {
+  padding: 5rem 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.school-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.school-block {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.school-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  background: var(--democratie-light);
+  color: var(--democratie-dark);
+  font-weight: 800;
+  font-size: 0.8rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.school-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  margin-bottom: 0.85rem;
+}
+
+.school-text {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.school-common-note {
+  background: var(--white);
+  border-left: 4px solid var(--democratie);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.75rem;
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.note-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.note-text {
+  font-size: 0.96rem;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   9. Section finale — Appel à l’action (CTA)
+   ========================================================================== */
+.section-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.cta-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.2rem;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--ink-heading);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-white:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.btn-cta-secondary {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.btn-cta-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   10. Pied de page
+   ========================================================================== */
+.site-footer {
+  background-color: var(--ink-heading);
+  color: #9CA3AF;
+  padding: 3.5rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-info {
+  max-width: 480px;
+}
+
+.footer-brand {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  color: #9CA3AF;
+  line-height: 1.5;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: #D1D5DB;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-link:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-btn-top {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-btn-top:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  font-size: 0.82rem;
+}
+
+.offline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  color: #A7F3D0;
+  font-weight: 600;
+}
+
+.offline-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10B981;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   11. Media Queries & Responsive
+   ========================================================================== */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .school-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    display: none;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .nav-btn-highlight {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-fan-container {
+    transform: scale(0.9);
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* ==========================================================================
+   12. Réduction des animations (prefers-reduced-motion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
